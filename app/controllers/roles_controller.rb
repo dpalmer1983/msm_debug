@@ -15,9 +15,7 @@ class RolesController < ApplicationController
     @role.character_name = params[:character_name]
     @role.movie_id = params[:movie_id]
     @role.actor_id = params[:actor_id]
-
     @role.save
-
     render("show")
   end
 
@@ -27,19 +25,15 @@ class RolesController < ApplicationController
 
   def update_row
     @role = Role.find(params[:id])
-
     @role.character_name = params[:character_name]
     @role.movie_id = params[:movie_id]
     @role.actor_id = params[:actor_id]
-
     @role.save
-
     render("show")
   end
 
   def destroy
     @role = Role.find(params[:id])
-
     @role.destroy
   end
 end
